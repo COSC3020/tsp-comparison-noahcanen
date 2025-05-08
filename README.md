@@ -555,13 +555,34 @@ tsp_ls13: 43
 
 The graph of the result in middle seconds
 
+
+tsp_hk Purple line
+
+
+tsp_ls Red line
+
+
 ![image](https://github.com/user-attachments/assets/2f68fd78-bfed-4b4b-878a-6a8572ab4a8d)
 
 The graph of the result in minutes
 
+
+tsp_hk Orange line
+
+
+tsp_ls Purple line
+
+
 ![image](https://github.com/user-attachments/assets/1483c383-8eca-44e6-9852-fe4611cbe317)
 
 The graph of the distances of each route
+
+
+tsp_hk  Green line
+
+
+tsp_ls  Blue line
+
 
 ![image](https://github.com/user-attachments/assets/0dd3c811-6880-4065-a970-c639eebb6fd9)
 
