@@ -551,4 +551,7 @@ tsp_ls13: 0.1ms
 tsp_ls13: 43 
 
 
-#
+# graphs
+
+![image](https://github.com/user-attachments/assets/2f68fd78-bfed-4b4b-878a-6a8572ab4a8d)
+
