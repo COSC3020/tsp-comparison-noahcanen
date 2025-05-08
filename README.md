@@ -587,3 +587,23 @@ tsp_ls  Blue line
 ![image](https://github.com/user-attachments/assets/0dd3c811-6880-4065-a970-c639eebb6fd9)
 
 
+The tour length that Held-Karp found should always be less than or equal to the length that Local Search found. Why is this?
+
+That is because Held-Karp is a program that finds the true smallest path by searching all possible paths. 
+
+While local search only searches a portion of the possibilities.
+
+
+# explanation
+
+1st I looked up how to time a function then I created a program to make random weighted graphs. This program to make weighted graphs is partly made by me and partly by Google AI. Google AI made the random function for the random lengths. And an initial non-working version of the graph creation part. I put them together and got the graph creation part working. Then I put that and the two functions into a for loop and ran it on different-sized graphs from 0 nodes to 13. In the end, my long implementation took 55 minutes. I have been trying 14 nodes for about a day now, and it does not seem to be working, so I hope 55 minutes is enough. I originally put the numbers I got from the test into Excel, but I couldn't get it to produce a graph, so I just ended up plugging the numbers into Desmos.
+
+
+
+
+
+
+For this assignment, I used the resources of https://www.w3schools.com/jsref/met_console_timeend.asp, https://www.omnicalculator.com/conversion/ms-to-seconds-conversion, https://www.desmos.com/calculator, and Google AI
+
+"I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice."
+
