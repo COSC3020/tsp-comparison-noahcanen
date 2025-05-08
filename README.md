@@ -130,41 +130,41 @@ to this markdown file.
         x[a] = x[b];
         x[b] = temp;
     }
-  }
-  
-  function generateRandomGraph(numNodes) {
-    length = numNodes
-    adjMatrix = Array.from(Array(length), ()=>Array(length).fill(0))
-    for (let x = 0; x < length; x++) {
-        for (let y = x + 1; y < length; y++) {
-            ran = getRandomIntInclusive(1, 9)
-            adjMatrix [x][y] = ran
-            adjMatrix [y][x] = ran
-        }
     }
-  return adjMatrix;
-  }
-  function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
-    const r =14
-    const numNodes = r;
-    const distance_matrix = generateRandomGraph(numNodes);
+    
+    function generateRandomGraph(numNodes) {
+      length = numNodes
+      adjMatrix = Array.from(Array(length), ()=>Array(length).fill(0))
+      for (let x = 0; x < length; x++) {
+          for (let y = x + 1; y < length; y++) {
+              ran = getRandomIntInclusive(1, 9)
+              adjMatrix [x][y] = ran
+              adjMatrix [y][x] = ran
+          }
+      }
+    return adjMatrix;
+    }
+    function getRandomIntInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+      const r =14
+      const numNodes = r;
+      const distance_matrix = generateRandomGraph(numNodes);
+    
+      for (let i = 0; i < distance_matrix.length; i++) {console.log(distance_matrix[i])}
+    
+      console.time('tsp_hk'+ r) 
+      dis = tsp_hk(distance_matrix) 
+      console.timeEnd('tsp_hk'+ r)
+      console.log(dis, 'tsp_hk'+ r)
+    
+      console.time('tsp_ls'+ r) 
+      dis = tsp_ls(distance_matrix) 
+      console.timeEnd('tsp_ls'+ r)
+      console.log(dis, 'tsp_ls'+ r)
   
-    for (let i = 0; i < distance_matrix.length; i++) {console.log(distance_matrix[i])}
-  
-    console.time('tsp_hk'+ r) 
-    dis = tsp_hk(distance_matrix) 
-    console.timeEnd('tsp_hk'+ r)
-    console.log(dis, 'tsp_hk'+ r)
-  
-    console.time('tsp_ls'+ r) 
-    dis = tsp_ls(distance_matrix) 
-    console.timeEnd('tsp_ls'+ r)
-    console.log(dis, 'tsp_ls'+ r)
-
 
 # experiments results
 
