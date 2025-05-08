@@ -27,7 +27,7 @@ to this markdown file.
 # code
   
   
-{
+
   function tsp_hk(distance_matrix) {
       if (distance_matrix.length <= 1) return 0
       min_val = Infinity
@@ -54,7 +54,7 @@ to this markdown file.
       memory[place] = min_val
       return min_val
   }
-}
+
 
 
 
