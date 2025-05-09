@@ -553,50 +553,27 @@ tsp_ls13: 43
 
 # graphs
 
-The graph of the result in middle seconds
+
+![image](https://github.com/user-attachments/assets/b34022b1-babf-4a7d-969b-93771022c1ec)
 
 
-tsp_hk Purple line
+![image](https://github.com/user-attachments/assets/c683e49c-7ac2-4bee-866f-bfc2df6229d6)
 
 
-tsp_ls Red line
+![image](https://github.com/user-attachments/assets/f3ae1d1e-eace-40a2-8fc7-73f74d458695)
 
 
-![image](https://github.com/user-attachments/assets/2f68fd78-bfed-4b4b-878a-6a8572ab4a8d)
-
-The graph of the result in minutes
+![image](https://github.com/user-attachments/assets/927c69d7-f3f6-42a1-b251-4d37473f17f1)
 
 
-tsp_hk Orange line
-
-
-tsp_ls Purple line
-
-
-![image](https://github.com/user-attachments/assets/1483c383-8eca-44e6-9852-fe4611cbe317)
-
-The graph of the distances of each route
-
-
-tsp_hk  Green line
-
-
-tsp_ls  Blue line
-
-
-![image](https://github.com/user-attachments/assets/0dd3c811-6880-4065-a970-c639eebb6fd9)
-
-
-The tour length that Held-Karp found should always be less than or equal to the length that Local Search found. Why is this?
-
-That is because Held-Karp is a program that finds the true smallest path by searching all possible paths. 
-
-While local search only searches a portion of the possibilities.
 
 
 # explanation
 
-1st I looked up how to time a function then I created a program to make random weighted graphs. This program to make weighted graphs is partly made by me and partly by Google AI. Google AI made the random function for the random lengths. And an initial non-working version of the graph creation part. I put them together and got the graph creation part working. Then I put that and the two functions into a for loop and ran it on different-sized graphs from 0 nodes to 13. In the end, my long implementation took 55 minutes. I have been trying 14 nodes for about a day now, and it does not seem to be working, so I hope 55 minutes is enough. I originally put the numbers I got from the test into Excel, but I couldn't get it to produce a graph, so I just ended up plugging the numbers into Desmos.
+1st, I looked up how to time a function, then I created a program to make random weighted graphs. This program to make weighted graphs is partly made by me and partly by Google AI. Google AI made the random function for the random lengths. And an initial non-working version of the graph creation part. I put them together and got the graph creation part working. Then I put that and the two functions into a for loop and ran it on different-sized graphs from 0 nodes to 13. In the end, my longest implementation took 55 minutes. I have been trying 14 nodes for about a day now, and it does not seem to be working, so I hope 55 minutes is enough. I graphed the numbers I got from the test in Excel. I noticed that my two-time graphs weren’t showing the exponentiality of tsp_hk. So, I made a 4th graph showing the increase in time. That graph pointed out some irregularities. So, if you would like me to test it again, please let me know.
+
+Yes again I did not reach an hour but I did reach 55 minutes which is very close to an hour and I have been running 14 nodes inside the background all day and although it sees me making progress because I have to stop and start it to move my PC. so I don't know how reliable the time will be on that one.
+
 
 
 
