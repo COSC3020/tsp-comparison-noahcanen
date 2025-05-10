@@ -628,7 +628,115 @@ Here is the modified for loop
         cities = optSwap(cities, cities.length)
     }
 
-The 15 distances and times it took to get those distances before tsp_l took an hour.
+The 10 distances and times it took to get those distances before tsp_l took an hour.
+
+
+sp_ls5000: 2961281.7690429688 ms
+
+
+tsp_ls5000: 49:21.293 (m:ss.mmm)
+
+
+tsp_ls5000: 24191
+
+
+tsp_ls5001: 4490836.216064453 ms
+
+
+tsp_ls5001: 1:14:50.823 (h:mm:ss.mmm)
+
+
+tsp_ls5001: 24148
+
+
+tsp_ls5002: 3618936.6701660156 ms
+
+
+tsp_ls5002: 1:00:18.935 (h:mm:ss.mmm)
+
+
+tsp_ls5002: 24216
+
+
+tsp_ls5003: 3161234.2109375 ms
+
+
+tsp_ls5003: 52:41.235 (m:ss.mmm)
+
+
+tsp_ls5003: 24178
+
+
+tsp_ls5004: 3752692.2639160156 ms
+
+
+tsp_ls5004: 1:02:32.632 (h:mm:ss.mmm)
+
+
+tsp_ls5004: 24120
+
+
+tsp_ls5005: 4596889.54296875 ms
+
+
+tsp_ls5005: 1:16:36.729 (h:mm:ss.mmm)
+
+
+tsp_ls5005: 24199
+
+
+tsp_ls5006: 2847745.880859375 ms
+
+
+tsp_ls5006: 47:27.708 (m:ss.mmm)
+
+
+tsp_ls5006: 24019
+
+
+tsp_ls5007: 3230255.8120117188 ms
+
+
+tsp_ls5007: 53:50.228 (m:ss.mmm)
+
+
+tsp_ls5007: 24222
+
+
+tsp_ls5008: 3213661.3317871094 ms
+
+
+tsp_ls5008: 53:33.657 (m:ss.mmm)
+
+
+tsp_ls5008: 24216
+
+
+tsp_ls5009: 2226904.7978515625 ms
+
+
+tsp_ls5009: 37:06.894 (m:ss.mmm)
+
+
+tsp_ls5009: 24165
+
+
+tsp_ls5010: 2953646.031982422 ms
+
+
+tsp_ls5010: 49:13.628 (m:ss.mmm)
+
+
+tsp_ls5010: 24217
+
+
+tsp_ls5011: 3765345.341064453 ms
+
+
+tsp_ls5011: 1:02:45.334 (h:mm:ss.mmm)
+
+
+tsp_ls5011: 24234
 
 
 
@@ -647,14 +755,21 @@ The 15 distances and times it took to get those distances before tsp_l took an h
 ![image](https://github.com/user-attachments/assets/927c69d7-f3f6-42a1-b251-4d37473f17f1)
 
 
+![image](https://github.com/user-attachments/assets/840dd2e8-fd6c-42dd-a9f2-cb0c1cffc226)
+
+
+![image](https://github.com/user-attachments/assets/442ae0df-f899-4401-8366-c0eecb390f8a)
+
+
+![image](https://github.com/user-attachments/assets/7bedf732-1b50-48c1-8552-aa92fd9d6ca4)
 
 
 # explanation
 
 1st, I looked up how to time a function, then I created a program to make random weighted graphs. This program to make weighted graphs is partly made by me and partly by Google AI. Google AI made the random function for the random lengths. And an initial non-working version of the graph creation part. I put them together and got the graph creation part working. Then I put that and the two functions into a for loop and ran it on different-sized graphs from 0 nodes to 14. The 14th node took 31 hours, although this is bigger than an hour, it is also suspect because I had to move my computer several times, and each time I moved my laptop, I suspect that the program stopped. So I am not graphing it. 
 
-I am currently searching for the number of nodes needed to make local search run for an hour a modified code. When I find it I will make a new graph solely from those numbers but because I believe the number will be large I will only include data points for 15 graphs before the graph that causes local search to reach an hour.
 
+I narrowed down the number of nodes that would cause my local search to run for an hour and decided it was around 5,000. I left it running overnight and woke up to find 12 values, some of which took over an hour and some of which took under an hour. Because of the modification I made, the time it takes to find the smallest distance changes wildly. But the overall time it takes is increasing; it is hard to show because it grows at n^2.
 
 
 
