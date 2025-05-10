@@ -551,6 +551,87 @@ tsp_ls13: 0.1ms
 tsp_ls13: 43 
 
 
+(14) [0, 8, 8, 1, 3, 8, 7, 1, 5, 3, 3, 1, 7, 8]
+
+
+(14) [8, 0, 9, 2, 7, 6, 9, 8, 8, 8, 5, 3, 4, 8]
+
+
+(14) [8, 9, 0, 7, 1, 8, 9, 1, 6, 8, 7, 1, 2, 5]
+
+
+(14) [1, 2, 7, 0, 6, 6, 9, 6, 1, 8, 2, 9, 4, 4]
+
+
+(14) [3, 7, 1, 6, 0, 8, 6, 6, 9, 3, 9, 5, 7, 8]
+
+
+(14) [8, 6, 8, 6, 8, 0, 4, 8, 6, 5, 7, 7, 5, 5]
+
+
+(14) [7, 9, 9, 9, 6, 4, 0, 3, 9, 7, 1, 5, 4, 6]
+
+
+(14) [1, 8, 1, 6, 6, 8, 3, 0, 6, 1, 1, 7, 3, 9]
+
+
+(14) [5, 8, 6, 1, 9, 6, 9, 6, 0, 4, 9, 4, 3, 6]
+
+
+(14) [3, 8, 8, 8, 3, 5, 7, 1, 4, 0, 4, 5, 1, 5]
+
+
+(14) [3, 5, 7, 2, 9, 7, 1, 1, 9, 4, 0, 5, 8, 3]
+
+
+(14) [1, 3, 1, 9, 5, 7, 5, 7, 4, 5, 5, 0, 9, 3]
+
+
+(14) [7, 4, 2, 4, 7, 5, 4, 3, 3, 1, 8, 9, 0, 9]
+
+
+(14) [8, 8, 5, 4, 8, 5, 6, 9, 6, 5, 3, 3, 9, 0]
+
+
+tsp_hk14: 113806980.52685547 ms
+
+
+tsp_hk14: 31:36:46.393 (h:mm:ss.mmm)
+
+
+ tsp_hk14: 25
+
+
+tsp_ls14: 0.545166015625 ms
+
+
+tsp_ls14: 0.616ms
+
+
+tsp_ls14: 67 
+
+
+Now I am just going to run a local search until I get a time of an hour 
+
+
+I will slightly modify my code to improve the distance and git it to an hour.  Whenever a better distance is found, I will reset i back to zero.
+
+Here is the modified for loop
+
+    for (var i = 0; i < Search; i++){
+        newd = distanceTour(cities,distance_matrix)
+        if(distance > newd){
+            i = 0
+            distance = newd
+        }
+
+        cities = optSwap(cities, cities.length)
+    }
+
+The 15 distances and times it took to get those distances before tsp_l took an hour.
+
+
+
 # graphs
 
 
@@ -570,10 +651,9 @@ tsp_ls13: 43
 
 # explanation
 
-1st, I looked up how to time a function, then I created a program to make random weighted graphs. This program to make weighted graphs is partly made by me and partly by Google AI. Google AI made the random function for the random lengths. And an initial non-working version of the graph creation part. I put them together and got the graph creation part working. Then I put that and the two functions into a for loop and ran it on different-sized graphs from 0 nodes to 13. In the end, my longest implementation took 55 minutes. I have been trying 14 nodes for about a day now, and it does not seem to be working, so I hope 55 minutes is enough. I graphed the numbers I got from the test in Excel. I noticed that my two-time graphs weren’t showing the exponentiality of tsp_hk. So, I made a 4th graph showing the increase in time. That graph pointed out some irregularities. So, if you would like me to test it again, please let me know.
+1st, I looked up how to time a function, then I created a program to make random weighted graphs. This program to make weighted graphs is partly made by me and partly by Google AI. Google AI made the random function for the random lengths. And an initial non-working version of the graph creation part. I put them together and got the graph creation part working. Then I put that and the two functions into a for loop and ran it on different-sized graphs from 0 nodes to 14. The 14th node took 31 hours, although this is bigger than an hour, it is also suspect because I had to move my computer several times, and each time I moved my laptop, I suspect that the program stopped. So I am not graphing it. 
 
-Yes again I did not reach an hour but I did reach 55 minutes which is very close to an hour and I have been running 14 nodes inside the background all day and although it sees me making progress because I have to stop and start it to move my PC. so I don't know how reliable the time will be on that one.
-
+I am currently searching for the number of nodes needed to make local search run for an hour a modified code. When I find it I will make a new graph solely from those numbers but because I believe the number will be large I will only include data points for 15 graphs before the graph that causes local search to reach an hour.
 
 
 
